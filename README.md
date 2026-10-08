@@ -1,22 +1,22 @@
 # LibGDX Platformer 4 Levels
 
-Un joc 2D platformer în Java cu LibGDX, pregătit pentru IntelliJ IDEA.
+Acest proiect este refăcut din zero pentru a funcționa corect cu IntelliJ și Gradle.
 
-## Ce include
-- 4 nivele diferite
-- jucător tip "bila"
-- inamici care se mișcă
-- salt + coliziuni
-- obiectiv la finalul fiecărui nivel
-- control cu tastele săgeți / A-D / W / Space
+## Cerințe
+- JDK 23
+- IntelliJ IDEA
+- Gradle (poate fi descărcat automat de IntelliJ)
+
+## Structură
+- `core` = logica jocului
+- `desktop` = launcher-ul care deschide fereastra jocului
 
 ## Cum rulezi
-1. Deschide proiectul în IntelliJ IDEA.
-2. Lasă Gradle să descarce dependențele.
-3. Rulează clasa `DesktopLauncher` din modul `desktop`.
-
-## Link pentru ZIP
-Dacă vrei să descarci arhiva de proiect, folosește butonul `Code -> Download ZIP` din GitHub.
+1. Instalează JDK 23.
+2. Deschide proiectul în IntelliJ.
+3. Așteaptă sincronizarea Gradle.
+4. Rulează fișierul:
+   `desktop/src/com/ballplatformer/DesktopLauncher.java`
 
 ## Controale
 - `←` / `A` = stânga
@@ -24,5 +24,10 @@ Dacă vrei să descarci arhiva de proiect, folosește butonul `Code -> Download 
 - `↑` / `W` / `Space` = săritură
 - `R` = restart nivel
 
-## Autor
-Proiect pregătit pentru a merge direct în IntelliJ.
+## Ce include
+- 4 nivele
+- personaj tip bilă
+- inamici
+- platforme
+- coliziuni simple
+- actualizare de scor și vieți

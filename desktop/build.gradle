@@ -1,8 +1,12 @@
 plugins {
-    id 'java'
+    id 'application'
 }
 
-sourceCompatibility = JavaVersion.VERSION_17
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(23)
+    }
+}
 
 repositories {
     mavenCentral()
@@ -10,4 +14,10 @@ repositories {
 
 dependencies {
     implementation project(':core')
+    implementation 'com.badlogicgames.gdx:gdx-backend-lwjgl3:1.12.1'
+    implementation 'com.badlogicgames.gdx:gdx-platform:1.12.1:natives-desktop'
+}
+
+application {
+    mainClass = 'com.ballplatformer.DesktopLauncher'
 }

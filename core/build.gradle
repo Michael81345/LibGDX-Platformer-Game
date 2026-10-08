@@ -1,9 +1,17 @@
 plugins {
-    id 'java'
+    id 'java-library'
 }
 
-sourceCompatibility = JavaVersion.VERSION_17
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(23)
+    }
+}
 
 repositories {
     mavenCentral()
+}
+
+dependencies {
+    api 'com.badlogicgames.gdx:gdx:1.12.1'
 }
