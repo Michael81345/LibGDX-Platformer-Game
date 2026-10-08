@@ -1,15 +1,10 @@
-buildscript {
-    repositories {
-        mavenCentral()
-        maven { url 'https://plugins.gradle.org/m2/' }
-    }
+ext {
+    gdxVersion = '1.12.1'
 }
 
 allprojects {
+    group = 'com.ballplatformer'
     version = '1.0'
-    ext {
-        gdxVersion = '1.12.1'
-    }
 
     repositories {
         mavenCentral()
@@ -27,11 +22,15 @@ project(':core') {
 }
 
 project(':desktop') {
-    apply plugin: 'java'
+    apply plugin: 'application'
 
     dependencies {
         implementation project(':core')
         implementation "com.badlogicgames.gdx:gdx-backend-lwjgl3:$gdxVersion"
         implementation "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
+    }
+
+    application {
+        mainClass = 'com.ballplatformer.DesktopLauncher'
     }
 }
